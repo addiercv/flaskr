@@ -1,0 +1,11 @@
+<!doctype html> 
+<title>{% block title %}{% endblock %} - Flaskr</title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+<nav>
+    <h1>Flaskr</h1> 
+    <ul>
+        {% if g.user %} 
+        <li><span>{{ g.user['username'] }}</span>
+        </li>
+    </ul>
+</nav>
